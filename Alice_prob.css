@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+body{
+    text-align: center;
+    margin: 1%;
+    padding:0;
+    background: #ffffff;
+}
+
+h1{
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    color: #49BEAA;
+    font-family: 'Rampart One', cursive;
+}
+
+h1::after,h1::before{
+    content: '   ';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+
+    /* Quitamos las lineas */
+    transform: scale(0);
+    /* Aparecen */
+    transition: all 0.5s ease-in;
+}
+
+h1:hover::before, h1:hover::after{ transform: scale(1); }
+h1::before{ left: -120px; }
+h1::after{ right: -120px; }
+
+
+
+
